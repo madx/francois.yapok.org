@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  .font-inter {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+a {
+  @apply text-red-700 underline transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-red-500 no-underline;
+  /* Lol */
+}
