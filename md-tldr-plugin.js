@@ -127,9 +127,7 @@ module.exports = function front_matter_plugin(md) {
     const meta = yaml.parse(content)
     const slug = slugify(meta.title, { lower: true })
     return `<header>
-<h3 id="${slug}">${
-      meta.title
-    } <a href="#${slug}" class="text-sm opacity-50 align-middle hover:opacity-100 no-underline">🔗</a></h3>
+<h3 id="${slug}">${meta.title} <a href="#${slug}">🔗</a></h3>
 <time datetime="${meta.date}">${format(Date.parse(meta.date), "PP")}</time>
 <ul>${meta.tags
       .split(",")

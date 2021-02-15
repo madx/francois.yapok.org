@@ -43,7 +43,7 @@ function removeFromCache(moduleId) {
 %%%
 title: Five-line TailwindCSS-based styled components
 date: 2020-05-14
-tags: javascript"
+tags: javascript
 %%%
 
 I recently discovered [TailwindCSS][tailwind] and I think it's a great tool to

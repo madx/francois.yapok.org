@@ -29,6 +29,10 @@ article header h3 {
   @apply text-2xl font-semibold mt-2 mb-1;
 }
 
+article header h3 a {
+  @apply text-sm opacity-50 align-middle hover:opacity-100 no-underline;
+}
+
 article header time {
   @apply font-semibold italic text-gray-500 text-sm;
 }
