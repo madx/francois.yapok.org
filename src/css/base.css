@@ -18,5 +18,4 @@ a {
 
 a:hover {
   @apply text-red-500 no-underline;
-  /* Lol */
 }

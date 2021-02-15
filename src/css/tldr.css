@@ -1,0 +1,145 @@
+article:not(:first-of-type) {
+  @apply mt-24;
+}
+
+article p,
+article blockquote,
+article ul,
+article ol {
+  @apply my-3;
+}
+
+article pre {
+  @apply my-5;
+}
+
+article pre {
+  @apply p-4 rounded-md overflow-auto text-sm;
+}
+
+article blockquote {
+  @apply p-4 pl-8 italic border-l-4 bg-gray-100;
+}
+
+article header {
+  @apply mb-4;
+}
+
+article header h3 {
+  @apply text-2xl font-semibold mt-2 mb-1;
+}
+
+article header time {
+  @apply font-semibold italic text-gray-500 text-sm;
+}
+
+article header ul {
+  @apply flex flex-wrap font-medium space-x-2 mb-0 mt-1 text-gray-500 text-sm;
+}
+
+article .twitter-tweet {
+  @apply mx-auto;
+}
+
+code[class*="language-"],
+pre {
+  @apply font-mono bg-gray-900 text-gray-100 text-left break-normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre {
+  white-space: pre;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  @apply bg-gray-900;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply italic text-gray-400;
+}
+
+.token.punctuation {
+  @apply text-gray-300;
+}
+
+.token.namespace {
+  @apply opacity-75;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-yellow-500;
+}
+
+.token.boolean,
+.token.number {
+  @apply text-purple-500;
+}
+
+.token.tag .token.punctuation {
+  color: inherit;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-green-400;
+}
+
+.token.entity {
+  @apply text-pink-500;
+}
+
+.token.operator,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  @apply text-gray-300;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  @apply text-yellow-400;
+}
+
+.token.keyword {
+  @apply text-red-400;
+}
+
+.token.regex,
+.token.important {
+  @apply text-indigo-400;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
