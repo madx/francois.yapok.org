@@ -5,6 +5,18 @@ layout: tldr
 ::: article
 
 %%%
+title: My opinion on TypeScript, beginning of 2021
+date: 2021-02-15
+tags: typescript, javascript
+%%%
+
+It sucks.
+
+:::
+
+::: article
+
+%%%
 title: Recursively invalidating require cache in Node.js
 date: 2020-05-14
 tags: javascript, node
