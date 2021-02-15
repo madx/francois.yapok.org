@@ -1,6 +1,7 @@
 // Process block-level custom containers
 //
 const yaml = require("yaml")
+const slugify = require("slugify")
 const { format } = require("date-fns")
 
 module.exports = function front_matter_plugin(md) {
@@ -124,8 +125,11 @@ module.exports = function front_matter_plugin(md) {
   md.renderer.rules["front_matter"] = (tokens, idx, options, env, slf) => {
     const content = tokens[idx].content
     const meta = yaml.parse(content)
+    const slug = slugify(meta.title, { lower: true })
     return `<header>
-<h3>${meta.title}</h3>
+<h3 id="${slug}">${
+      meta.title
+    } <a href="#${slug}" class="text-sm opacity-50 align-middle hover:opacity-100 no-underline">🔗</a></h3>
 <time datetime="${meta.date}">${format(Date.parse(meta.date), "PP")}</time>
 <ul>${meta.tags
       .split(",")
