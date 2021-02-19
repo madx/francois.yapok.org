@@ -10,7 +10,7 @@ date: 2021-02-15
 tags: typescript, javascript
 %%%
 
-It sucks.
+~~It sucks.~~ I don't like it.
 
 :::
 
