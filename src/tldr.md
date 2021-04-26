@@ -5,12 +5,28 @@ layout: tldr
 ::: article
 
 %%%
+title: Small talk kills async interactions
+date: 2021-04-26
+tags: company, methodology
+%%%
+
+Hey everyone! How goes?
+
+:::
+
+::: article
+
+%%%
 title: My opinion on TypeScript, beginning of 2021
 date: 2021-02-15
 tags: typescript, javascript
 %%%
 
 ~~It sucks.~~ I don't like it.
+
+_Edit April 2021:_ I still dislike parts of it and its excessive verbosity, but
+I see and understand the value in using it, especially in a team. I still think
+it is way too tied to the tooling tho (_i.e._ hard to use without VSCode)
 
 :::
 

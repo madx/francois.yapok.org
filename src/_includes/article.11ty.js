@@ -1,7 +1,9 @@
-exports.render = data => `<!doctype html>
+const { format } = require("date-fns")
+
+exports.render = data => (console.log(data),`<!doctype html>
 <html>
   <head>
-    <title>tl;dr - François Vaux</title>
+    <title>${data.title} - François Vaux</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,13 +29,15 @@ exports.render = data => `<!doctype html>
   <body
     class="min-h-screen max-w-full flex flex-col items-center bg-white font-normal font-inter text-gray-900 p-2"
   >
-    <header class="mt-8 mb-12 flex flex-col items-center">
-      <h1 class="text-3xl font-black text-red-800">tl;dr</h1>
+    <main class="w-full max-w-3xl">
+      <header class="mt-8 mb-12 flex flex-col items-center">
+        <h1 class="text-3xl font-black text-red-800">${data.title}</h1>
       <h2 class="text-2xl font-light text-gray-600 text-center">
-        dev tips &amp; articles by François Vaux
+        ${format(data.date, "PP")}
       </h2>
-    </header>
-    <main class="w-full max-w-3xl">${data.content}</main>
+      </header>
+      <article>${data.content}</article>
+    </main>
     <footer class="text-sm mt-8 mb-4">
       <a href="/">
         <img src="/img/favicon.png" class="inline w-6 h-6 ml-1 rounded-full" />
@@ -49,4 +53,4 @@ exports.render = data => `<!doctype html>
     ></script>
   </body>
 </html>
-`
+`)

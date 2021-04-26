@@ -45,6 +45,10 @@ article .twitter-tweet {
   @apply mx-auto;
 }
 
+article h2 {
+  @apply text-2xl font-semibold mt-2 mb-1;
+}
+
 code[class*="language-"],
 pre {
   @apply font-mono bg-gray-900 text-gray-100 text-left break-normal;

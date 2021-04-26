@@ -126,8 +126,12 @@ module.exports = function front_matter_plugin(md) {
     const content = tokens[idx].content
     const meta = yaml.parse(content)
     const slug = slugify(meta.title, { lower: true })
+    const heading = meta.single ? "h1" : "h3"
     return `<header>
-<h3 id="${slug}">${meta.title} <a href="#${slug}">🔗</a></h3>
+<${heading} id="${slug}">
+  ${meta.title}
+  ${meta.single ? "" : `<a href="#${slug}">🔗</a>`}
+</${heading}>
 <time datetime="${meta.date}">${format(Date.parse(meta.date), "PP")}</time>
 <ul>${meta.tags
       .split(",")
