@@ -8,6 +8,7 @@ const mdTldr = require("./md-tldr-plugin")
 
 module.exports = (eleventy) => {
   eleventy.addPassthroughCopy("src/img")
+  eleventy.addPassthroughCopy("src/css/font-files")
 
   eleventy.addPlugin(pluginTailwindCSS)
   eleventy.addPlugin(pluginSyntaxHighlight)

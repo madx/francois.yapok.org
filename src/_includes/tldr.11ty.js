@@ -1,4 +1,4 @@
-exports.render = data => `<!doctype html>
+exports.render = (data) => `<!doctype html>
 <html>
   <head>
     <title>tl;dr - François Vaux</title>
@@ -11,9 +11,12 @@ exports.render = data => `<!doctype html>
       content="Development-related tips and articles by François Vaux, full-stack developer"
     />
     <link rel="shortcut icon" href="/img/favicon.png" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/tldr.css" />
+    <link rel="preload" as="style" href="../css/inter.css" />
+    <link rel="preload" as="style" href="../css/base.css" />
+    <link rel="preload" as="style" href="../css/tldr.css" />
+    <link rel="stylesheet" href="../css/inter.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/tldr.css" />
     <meta property="og:title" content="François Vaux" />
     <meta
       property="og:description"

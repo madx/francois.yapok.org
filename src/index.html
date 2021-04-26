@@ -9,7 +9,9 @@
   <meta name="author" content="François Vaux" />
   <meta name="description" content="Personal home page of François Vaux, full-stack developer" />
   <link rel="shortcut icon" href="./img/favicon.png" />
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="preload" as="style" href="./css/inter.css" />
+  <link rel="preload" as="style" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/inter.css" />
   <link rel="stylesheet" href="./css/base.css" />
   <meta property="og:title" content="François Vaux" />
   <meta property="og:description" content="Personal home page of François Vaux, full-stack developer" />
@@ -37,9 +39,9 @@
         <strong>React</strong>, <strong>Next.JS</strong> and
         <strong>fastify</strong>), a solid data layer like
         <strong>PostgreSQL</strong> (maybe with <strong>Prisma</strong> to
-        query it) and all of this orchestrated with <strong>Docker</strong>
-        containers. My IDE is <strong>Vim</strong> and I manage source code
-        with <strong>Git</strong>(Hub|Lab).
+        query it) and all of this orchestrated with
+        <strong>Docker</strong> containers. My IDE is <strong>Vim</strong> and
+        I manage source code with <strong>Git</strong>(Hub|Lab).
       </p>
       <p>
         I'm currently working at <a href="https://eshard.com/">eShard</a> as a
@@ -57,24 +59,25 @@
       </p>
       <p>
         If you wanna get in touch, just replace the first dot by an @ in this
-        domain name to get my email address. If you want to see my more details
-        about my technical background and my past professional endeavours, go
-        check out
+        domain name to get my email address. If you want to see my more
+        details about my technical background and my past professional
+        endeavours, go check out
         <a href="https://www.linkedin.com/in/francoisvaux/">my LinkedIn profile</a>.
       </p>
     </section>
   </main>
   <script>
+    ;
     (() => {
       let k = [],
         U = "aHR0cDovL3BsYXkueWFwb2sub3Jn",
         K =
-        "QXJyb3dVcCxBcnJvd1VwLEFycm93RG93bixBcnJvd0Rvd24sQXJyb3dMZWZ0LEFycm93UmlnaHQsQXJyb3dMZWZ0LEFycm93UmlnaHQsYixh";
+        "QXJyb3dVcCxBcnJvd1VwLEFycm93RG93bixBcnJvd0Rvd24sQXJyb3dMZWZ0LEFycm93UmlnaHQsQXJyb3dMZWZ0LEFycm93UmlnaHQsYixh"
       document.addEventListener("keyup", (e) => {
-        k = [...k, e.key].slice(-10);
-        if (btoa("" + k) === K) window.location = atob(U);
-      });
-    })();
+        k = [...k, e.key].slice(-10)
+        if (btoa("" + k) === K) window.location = atob(U)
+      })
+    })()
   </script>
   <script async defer data-website-id="c3e1a878-6ee7-4b60-9ab4-2dd60f4cee8c" src="https://umami.yapok.org/umami.js"></script>
 </body>
