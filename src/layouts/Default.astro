@@ -1,10 +1,10 @@
 ---
 import clsx from "clsx"
-const { content, meta, vertical }  = Astro.props
+const { content, meta, className = "" }  = Astro.props
 const { title, description } = {...meta, ...content}
 ---
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <title>{title}</title>
@@ -32,7 +32,7 @@ const { title, description } = {...meta, ...content}
   <main
     class={clsx(
       "flex max-w-3xl flex-col items-center",
-      !vertical && "sm:flex-row sm:items-start"
+      className
     )}>
       <slot />
     </main>

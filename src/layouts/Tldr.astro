@@ -13,7 +13,7 @@ const meta = {
 }
 
 ---
-<DefaultLayout meta={meta} vertical>
+<DefaultLayout meta={meta} className="min-h-screen">
   <link rel="stylesheet" href={Astro.resolve("../styles/tldr.css")} slot="css" />
 
   <header class="mt-8 mb-12 flex flex-col items-center">
@@ -29,7 +29,7 @@ const meta = {
 
   <footer class="text-sm mt-8 mb-4">
     <a href="/">
-      <img src="/img/favicon.png" class="inline w-6 h-6 ml-1 rounded-full" />
+      <img width="24" height="24" alt="Avatar" src="/img/favicon.png" class="inline w-6 h-6 ml-1 rounded-full" />
       François Vaux</a
     >
     - © 2020 &amp; up
