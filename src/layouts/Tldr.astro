@@ -1,0 +1,37 @@
+---
+import clsx from "clsx"
+import DefaultLayout from "~/layouts/Default"
+
+const DEFAULT_META = {
+  title: `tl;dr - François Vaux`,
+  description: "Development-related tips and articles by François Vaux, full-stack developer",
+}
+
+const meta = {
+  ...DEFAULT_META,
+  ...Astro.props.meta
+}
+
+---
+<DefaultLayout meta={meta} vertical>
+  <link rel="stylesheet" href={Astro.resolve("../styles/tldr.css")} slot="css" />
+
+  <header class="mt-8 mb-12 flex flex-col items-center">
+    <h1 class="text-3xl font-black text-red-800">
+      <a href="/tldr/">tl;dr</a>
+    </h1>
+    <h2 class="text-2xl font-light text-gray-600 text-center">
+      dev tips &amp; articles by François Vaux
+    </h2>
+  </header>
+
+  <slot />
+
+  <footer class="text-sm mt-8 mb-4">
+    <a href="/">
+      <img src="/img/favicon.png" class="inline w-6 h-6 ml-1 rounded-full" />
+      François Vaux</a
+    >
+    - © 2020 &amp; up
+  </footer>
+</DefaultLayout>

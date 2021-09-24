@@ -1,11 +1,4 @@
 module.exports = {
-  purge: ["./src/**/*"],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  mode: "jit",
+  purge: ["./src/**/*.{astro,js,md}"],
 }

@@ -1,0 +1,25 @@
+---
+import { Markdown } from "astro/components"
+import slugify from "slugify"
+import TldrLayout from "~/layouts/Tldr"
+import PostHeader from "~/components/PostHeader"
+
+const { content: rawPost } = Astro.props
+const post = {
+  ...rawPost,
+  date: new Date(rawPost.date),
+  tags: rawPost.tags.split(/\s*,\s*/),
+  slug: slugify(rawPost.title, { lower: true })
+}
+const meta = {
+  title: `${post.title} - tl;dr - François Vaux`,
+}
+---
+<TldrLayout meta={meta}>
+  <article class="mt-24 first-of-type:mt-0" id={post.slug}>
+    <PostHeader basePath="/tldr/" post={post} />
+    <article class="prose">
+      <slot />
+    </article>
+  </article>
+</TldrLayout>

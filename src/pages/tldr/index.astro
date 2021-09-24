@@ -1,0 +1,27 @@
+---
+import { Markdown } from "astro/components"
+import slugify from "slugify"
+import { format, formatISO } from "date-fns"
+import TldrLayout from "~/layouts/Tldr"
+import PostHeader from "~/components/PostHeader"
+
+const basePosts = Astro.fetchContent("./*.md")
+
+const posts = basePosts.map(post => ({
+  ...post,
+  date: new Date(post.date),
+  tags: post.tags.split(/\s*,\s*/),
+  slug: slugify(post.title, { lower: true })
+})).sort((a, b) => b.date - a.date)
+
+---
+<TldrLayout>
+  {posts.map((post) => (
+    <article class="mt-24 first-of-type:mt-0 w-full" id={post.slug}>
+      <PostHeader basePath="/tldr/" post={post} />
+      <article class="prose">
+        {post.astro.html}
+      </article>
+    </article>
+  ))}
+</TldrLayout>

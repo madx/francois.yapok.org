@@ -1,20 +1,21 @@
 {
-  "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.6",
-    "date-fns": "^2.17.0",
-    "eleventy-plugin-tailwindcss": "^0.3.0",
-    "markdown-it-anchor": "^7.0.2",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-emoji": "^2.0.0",
-    "postcss-cli": "^8.3.1",
-    "slugify": "^1.4.6",
-    "yaml": "^1.10.0"
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "astro dev",
+    "build": "astro build"
+  },
+  "devDependencies": {
+    "astro": "^0.20.7",
+    "date-fns": "^2.24.0",
+    "slugify": "^1.6.0",
+    "tailwindcss": "^2.2.15"
   },
   "prettier": {
     "semi": false
   },
-  "devDependencies": {
-    "prettier": "^2.2.1"
+  "dependencies": {
+    "clsx": "^1.1.1"
   }
 }

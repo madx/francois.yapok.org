@@ -1,0 +1,29 @@
+---
+import { format, formatISO } from "date-fns"
+
+const { post, basePath } = Astro.props
+---
+
+<header class="mb-4">
+  <h2 class="text-2xl font-semibold mt-2 mb-1">
+    <a
+      class="text-black no-underline"
+      href={`${basePath}${post.slug}`}
+      id={post.slug}
+    >
+      {post.title}
+    </a>
+  </h2>
+  <time
+    class="font-semibold italic text-gray-500 text-sm"
+    datetime={post.date}
+    title={formatISO(post.date)}
+  >
+    {format(post.date, "PP")}-
+  </time>
+  <ul class="inline-flex flex-wrap font-medium space-x-2 mb-0 mt-1 text-gray-500 text-sm">
+    {post.tags.map((tag) => (
+      <li>#{tag}</li>
+    ))}
+  </ul>
+</header>

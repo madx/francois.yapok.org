@@ -1,0 +1,54 @@
+---
+import clsx from "clsx"
+const { content, meta, vertical }  = Astro.props
+const { title, description } = {...meta, ...content}
+---
+<!doctype html>
+<html>
+
+<head>
+  <title>{title}</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="François Vaux" />
+  <meta name="description" content={description}/>
+  <link rel="shortcut icon" href="/img/favicon.png" />
+  <link rel="preload" as="style" href="/css/inter.css" />
+  <link rel="preload" as="style" href={Astro.resolve("../styles/main.css")} />
+  <link rel="stylesheet" href="/css/inter.css" />
+  <link rel="stylesheet" href={Astro.resolve("../styles/main.css")} />
+  <slot name="css" />
+  <link ref="sitemap" href="/sitemap.xml" />
+  <meta property="og:title" content={title}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:image" content="/img/photo.png" />
+  <meta property="og:url" content="https://francois.yapok.org" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@madx" />
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center bg-white font-normal font-inter">
+  <main
+    class={clsx(
+      "flex max-w-3xl flex-col items-center",
+      !vertical && "sm:flex-row sm:items-start"
+    )}>
+      <slot />
+    </main>
+  <script>
+    ;
+    (() => {
+      let k = [],
+        U = "aHR0cDovL3BsYXkueWFwb2sub3Jn",
+        K =
+        "QXJyb3dVcCxBcnJvd1VwLEFycm93RG93bixBcnJvd0Rvd24sQXJyb3dMZWZ0LEFycm93UmlnaHQsQXJyb3dMZWZ0LEFycm93UmlnaHQsYixh"
+      document.addEventListener("keyup", (e) => {
+        k = [...k, e.key].slice(-10)
+        if (btoa("" + k) === K) window.location = atob(U)
+      })
+    })()
+  </script>
+  <script async defer data-website-id="c3e1a878-6ee7-4b60-9ab4-2dd60f4cee8c" src="https://umami.yapok.org/umami.js"></script>
+</body>
+</html>
