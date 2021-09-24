@@ -2,6 +2,7 @@
 title: Recursively invalidating require cache in Node.js
 date: 2020-05-14
 tags: javascript, node
+layout: ~/layouts/TldrPost.astro
 ---
 
 While working on [Fluor.js][fluor]'s website, I found myself needing to reload

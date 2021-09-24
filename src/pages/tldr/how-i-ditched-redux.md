@@ -2,6 +2,7 @@
 title: How I ditched Redux
 date: 2019-11-06
 tags: javascript
+layout: ~/layouts/TldrPost.astro
 ---
 
 <blockquote class="update">
