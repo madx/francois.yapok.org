@@ -14,7 +14,7 @@ containers. My IDE is **Vim** and I manage source code with
 I also write [short tech-focused articles](/tldr/), do
 [Open Source](https://github.com/madx) stuff,
 [paint miniatures](https://instagram.com/koleir), enjoy headbanging to some
-[extreme](https://www.youtube.com/watch?v=JjNYmxdkd1w)
+[extreme](https://www.youtube.com/watch?v=ARI0XyTiips)
 [metal](https://www.youtube.com/watch?v=YODamIinCys)
 and sometimes I even [tweet](https://twitter.com/madx).
 
