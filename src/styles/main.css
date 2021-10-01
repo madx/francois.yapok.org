@@ -19,3 +19,7 @@ a {
 a:hover {
   @apply text-red-500 no-underline;
 }
+
+a + a {
+  @apply ml-1;
+}
