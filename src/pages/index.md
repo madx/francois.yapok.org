@@ -18,8 +18,7 @@ I also write [short tech-focused articles](/tldr/), do
 [metal](https://www.youtube.com/watch?v=YODamIinCys)
 and sometimes I even [tweet](https://twitter.com/madx).
 
-If you wanna get in touch, just replace the first dot by an @ in this
-domain name to get my email address. If you want to see my more
-details about my technical background and my past professional
-endeavours, go check out
+If you wanna get in touch, just replace the first dot by an @ in this domain
+name to get my email address. If you want to see more details about my
+technical background and my past professional endeavours, go check out
 [my LinkedIn profile](https://www.linkedin.com/in/francoisvaux/).
