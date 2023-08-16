@@ -11,6 +11,9 @@ dependencies:
   '@keystatic/next':
     specifier: ^0.0.11
     version: 0.0.11(@keystatic/core@0.0.116)(next@13.4.16)(react-dom@18.2.0)(react@18.2.0)
+  '@radix-ui/colors':
+    specifier: ^2.0.1
+    version: 2.0.1
   autoprefixer:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.28)
@@ -775,6 +778,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+
+  /@radix-ui/colors@2.0.1:
+    resolution: {integrity: sha512-EhWky2oSIf5y+BDfrAY+Rykrkh7m2/M/bgCVRr3M+Hnr4JOh+mtFZLHUS1j/WzaPw1uvd0vwhK3cbxsR0QnCgw==}
+    dev: false
 
   /@react-aria/actiongroup@3.6.1(react@18.2.0):
     resolution: {integrity: sha512-7QrVW12B6yaUIlsXlzeIwdjTtGexklz90RsG6U8vOpEE5Fk8AUwyGs1JxMtKBiU2S35EE/j4GU0ov2jUZXGOyw==}

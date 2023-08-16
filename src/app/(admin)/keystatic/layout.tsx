@@ -1,4 +1,4 @@
-import "@apee/app/(website)/globals.css";
+import "@madx/app/(website)/globals.css";
 import KeystaticApp from "./keystatic";
 
 export default function RootLayout() {
