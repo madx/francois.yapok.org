@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import "@radix-ui/colors/sky.css";
+@import "@radix-ui/colors/sky-alpha.css";
+@import "@radix-ui/colors/sky-dark.css";
+@import "@radix-ui/colors/sky-dark-alpha.css";
+
+@import "@radix-ui/colors/bronze.css";
+@import "@radix-ui/colors/bronze-alpha.css";
+@import "@radix-ui/colors/bronze-dark.css";
+@import "@radix-ui/colors/bronze-dark-alpha.css";
+
+@import "@radix-ui/colors/white-alpha.css";
+@import "@radix-ui/colors/black-alpha.css";
+
+.noisy::before {
+  content: "";
+  filter: url("#filter-noise");
+  position: fixed;
+  inset: 0px 0px 50%;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  mask-image: radial-gradient(100% 50% at 50% 0, black, transparent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.hero--inner {
+  background-image: radial-gradient(
+    50% 100% at 50% 0,
+    var(--bronze-a6),
+    var(--bronze-a3),
+    transparent
+  );
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.pulser {
+  container-type: size;
 }

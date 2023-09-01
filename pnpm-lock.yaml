@@ -14,6 +14,9 @@ dependencies:
   '@radix-ui/colors':
     specifier: ^2.0.1
     version: 2.0.1
+  '@swan-io/boxed':
+    specifier: ^1.1.0
+    version: 1.1.0
   autoprefixer:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.28)
@@ -23,6 +26,9 @@ dependencies:
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
+  cva:
+    specifier: ^0.0.0
+    version: 0.0.0
   next:
     specifier: 13.4.16
     version: 13.4.16(react-dom@18.2.0)(react@18.2.0)
@@ -2027,6 +2033,10 @@ packages:
       lodash.deburr: 4.1.0
     dev: false
 
+  /@swan-io/boxed@1.1.0:
+    resolution: {integrity: sha512-oH/ef12qo+7GRy1t1yOCpPESh+gP6cQkGXTMoaDiaNAJQB9LYYEJZO7/QboMpZQ6YwcVPiHhfjgsr/Vf45Yhpw==}
+    dev: false
+
   /@swc/helpers@0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
@@ -2636,6 +2646,10 @@ packages:
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+
+  /cva@0.0.0:
+    resolution: {integrity: sha512-KPdxLxXhIzmCNtGpqdONKC1JwEx0cDH8cnYh7KYFxO7JYf4DqqtcLg6g+1QA0SlIdME18n9m337DOxIlrsSF5Q==}
+    dev: false
 
   /damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
