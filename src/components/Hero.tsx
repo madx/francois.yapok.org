@@ -14,14 +14,16 @@ export default function Hero({ data }: Props) {
       <hr
         className={cn(
           "pulser relative top-px h-px w-full overflow-visible border-none bg-gradient-to-r from-bronze-2 via-bronze-9 to-bronze-2",
-          "after:animate-pulser after:block after:h-px after:w-8 after:bg-gradient-to-r after:from-transparent after:via-bronze-12 after:to-transparent after:mix-blend-lighten",
-          "before:animate-pulser before:bg-sky-a8 before:absolute before:-top-2 before:block before:h-4 before:w-8 before:blur-lg",
+          "after:block after:h-px after:w-8 after:animate-pulser after:bg-gradient-to-r after:from-transparent after:via-bronze-12 after:to-transparent after:mix-blend-lighten",
+          "before:absolute before:-top-2 before:block before:h-4 before:w-8 before:animate-pulser before:bg-sky-a8 before:blur-lg",
         )}
       />
-      <div className="hero--inner bg-bronze-surface/20 relative flex gap-x-8 p-12 pt-6">
-        <div className="space-y-6 pt-4 text-bronze-alpha-text-high md:pt-8">
+      <div className="hero--inner bg-bronze-surface/20 relative flex flex-wrap gap-x-8 p-6 md:flex-nowrap md:p-12">
+        <div className="order-2 space-y-6 text-center text-bronze-alpha-text-high md:pt-8 md:text-left">
           <div className="space-y-2">
-            <h1 className="flex-1 text-4xl font-black">{data.catchphrase}</h1>
+            <h1 className="flex-1 text-3xl font-black md:text-4xl">
+              {data.catchphrase}
+            </h1>
             <h2 className="flex-1 text-xl font-normal text-bronze-alpha-text-low">
               {data.position} at{" "}
               <Link
@@ -44,7 +46,7 @@ export default function Hero({ data }: Props) {
             <DocumentRenderer document={data.blurb} />
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4 md:justify-start">
             <Link
               shape="button"
               size="large"
@@ -53,18 +55,24 @@ export default function Hero({ data }: Props) {
             >
               Get in touch
             </Link>
-            <Link shape="outline" size="large" href="/resume">
+            <Link
+              shape="outline"
+              size="large"
+              href="https://www.linkedin.com/in/francoisvaux/"
+            >
               Resumé
             </Link>
           </div>
         </div>
-        <Image
-          src="/francois.png"
-          className="h-32 w-32 md:h-56 md:w-56"
-          width={300}
-          height={300}
-          alt=""
-        />
+        <div className="order-1 flex flex-shrink-0 flex-grow justify-center md:order-3">
+          <Image
+            src="/images/francois.png"
+            className="h-32 w-32 md:h-56 md:w-56"
+            width={300}
+            height={300}
+            alt=""
+          />
+        </div>
       </div>
     </header>
   );

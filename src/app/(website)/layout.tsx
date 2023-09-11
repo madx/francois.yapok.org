@@ -21,7 +21,7 @@ export default function RootLayout({
           inter.className,
         )}
       >
-        <div className="relative mx-auto w-full max-w-screen-lg space-y-8 p-8">
+        <div className="relative mx-auto w-full max-w-screen-lg space-y-8 md:p-8">
           {children}
         </div>
         <svg aria-hidden="true">

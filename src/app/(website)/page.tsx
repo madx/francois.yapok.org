@@ -53,19 +53,19 @@ export default async function Home() {
     <main>
       <Hero data={heroData.get()} />
 
-      <section className="space-y-6 p-12">
+      <section className="space-y-6 p-6 md:p-12">
         <h2 className="text-3xl font-black text-bronze-text-high">Stack</h2>
         <p className="max-w-screen-sm text-lg text-bronze-text-high">
           As with every craftmanship, building software requires a great set of
           tools. Over the years I had the opportunity to use quite a few. Here
           are the ones that currently stick out for me.
         </p>
-        <ul className="grid grid-cols-2 justify-between gap-6">
+        <ul className="grid justify-between gap-6 md:grid-cols-2">
           {STACK.map(({ description, image, name }) => (
             <li key={name} className="group">
-              <figure className="flex flex-shrink-0 gap-4 group-even:flex-row-reverse">
+              <figure className="flex flex-shrink-0 gap-4">
                 <Image
-                  className="max-h-24 w-24 object-contain opacity-60 transition-all duration-200 hover:opacity-100"
+                  className="max-h-12 w-12 object-contain opacity-80 transition-all duration-200 hover:opacity-100 md:max-h-24 md:w-24"
                   width={96}
                   height={96}
                   alt={name}
@@ -75,7 +75,7 @@ export default async function Home() {
                   <h2 className="text-xl font-bold text-bronze-text-high">
                     {name}
                   </h2>
-                  <p className="text">{description}</p>
+                  <p className="text md:pl-4">{description}</p>
                 </figcaption>
               </figure>
             </li>
